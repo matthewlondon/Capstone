@@ -4,6 +4,7 @@ import numpy as np
 
 def load_and_filter_zip_codes(zip_file):
     
+    # Filter for Jefferson County in Kentucky
     zip_to_county_df = pd.read_csv(zip_file)
     filtered_df = zip_to_county_df[
     (zip_to_county_df['county'] == 'Jefferson County') & 
@@ -18,7 +19,7 @@ def load_and_filter_zip_codes(zip_file):
 def load_and_clean_crime_data(file_paths, columns_to_rename, columns_to_drop):
     
     data_frames = []
-    
+    # Loop over files for processing
     for file in file_paths:
         df = pd.read_csv(file, low_memory=False)
         
@@ -150,8 +151,12 @@ def process_and_merge_data(crime_df):
     merged_df.drop(columns=["offense_code_name"], inplace=True)
     return merged_df
 
+# I'm casting each type appropriately but I don't think the type is retained after saving, thus I re cast when I load the cleaned csv in the exploration notebook
 def retype_data(merged_df):
     merged_df['zip'] = merged_df['zip'].astype('string')
+    merged_df['longitude'] = merged_df['longitude'].astype('float64')
+    merged_df['latitude'] = merged_df['latitude'].astype('float64')
+    merged_df['irs_estimated_population'] = merged_df['irs_estimated_population'].astype('Int64')
     merged_df['incident_number'] = merged_df['incident_number'].astype('string')
     merged_df['offense_classification'] = merged_df['offense_classification'].astype('category')
     merged_df['was_offense_completed'] = merged_df['was_offense_completed'].astype('category')
@@ -161,6 +166,7 @@ def retype_data(merged_df):
     merged_df['value_range'] = merged_df['value_range'].astype('category')
     return merged_df
 
+# Export new data
 def save_cleaned_data(merged_df):
 
     merged_df.to_csv('./data/processed_data/cleaned_crime_data.csv', index=False)

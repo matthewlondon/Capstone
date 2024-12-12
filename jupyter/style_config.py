@@ -1,11 +1,11 @@
 # Colors for dark mode
 COLORS = {
-    'primary': '#569cd6',  # Skyblue-like color for dark mode
-    'secondary': '#dcdcaa',  # Light yellow for accents
-    'highlight': '#c586c0',  # Purple for highlights
-    'grid': '#2d2d2d',       # Dark gray for gridlines
-    'background': '#1e1e1e', # VSCode dark mode background
-    'text': '#d4d4d4',       # Light gray text
+    'primary': '#569cd6',
+    'secondary': '#dcdcaa',
+    'highlight': '#c586c0',
+    'grid': '#2d2d2d',
+    'background': '#1e1e1e',
+    'text': '#d4d4d4',
 }
 
 # Font sizes
@@ -19,13 +19,10 @@ FONT_SIZES = {
 # Gridline style
 GRID_STYLE = {
     'color': COLORS['grid'],
-    'linestyle': '--',
-    'linewidth': 0.5,
-    'alpha': 0.7
 }
 
 # Default figure size
-FIGURE_SIZE = (10, 6)
+FIGURE_SIZE = (12, 8)
 
 # Apply the dark mode style globally
 def apply_dark_mode_style():
