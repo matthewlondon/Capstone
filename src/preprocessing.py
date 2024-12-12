@@ -12,7 +12,7 @@ def load_and_filter_zip_codes(zip_file):
 
     # Clean and reset index
     filtered_df['zip'] = pd.to_numeric(filtered_df['zip'], errors='coerce').astype('Int64')
-    filtered_df = filtered_df[['zip']].reset_index(drop=True)
+    filtered_df = filtered_df[['zip', 'latitude', 'longitude', 'irs_estimated_population']].reset_index(drop=True)
     filtered_df.to_csv('./data/processed_data/jefferson_zip_df.csv', index=False)
 
 def load_and_clean_crime_data(file_paths, columns_to_rename, columns_to_drop):
