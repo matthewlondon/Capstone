@@ -13,7 +13,7 @@ def load_and_filter_zip_codes(zip_file):
     # Clean and reset index
     filtered_df['zip'] = pd.to_numeric(filtered_df['zip'], errors='coerce').astype('Int64')
     filtered_df = filtered_df[['zip']].reset_index(drop=True)
-    filtered_df.to_csv('./data/jefferson_zip_df.csv', index=False)
+    filtered_df.to_csv('./data/processed_data/jefferson_zip_df.csv', index=False)
 
 def load_and_clean_crime_data(file_paths, columns_to_rename, columns_to_drop):
     
@@ -56,7 +56,7 @@ def load_and_clean_crime_data(file_paths, columns_to_rename, columns_to_drop):
     return pd.concat(data_frames, ignore_index=True)
 
 def process_and_merge_data(crime_df):
-    jefferson_zip_df = pd.read_csv('./data/jefferson_zip_df.csv')
+    jefferson_zip_df = pd.read_csv('./data/processed_data/jefferson_zip_df.csv')
     merged_df = jefferson_zip_df.merge(crime_df, how='inner', on='zip')
 
     # Clean and format date columns
@@ -163,5 +163,4 @@ def retype_data(merged_df):
 
 def save_cleaned_data(merged_df):
 
-    merged_df.to_csv('./data/combined_crime_data.csv', index=False)
-    print(merged_df.dtypes)
+    merged_df.to_csv('./data/processed_data/cleaned_crime_data.csv', index=False)
