@@ -28,7 +28,7 @@ This project analyzes crime data from Jefferson County, KY, spanning the years 2
 ## Steps to Reproduce
 1. Clone the repository:
 ```bash
-git clone [https://github.com/matthewlondon/Capstone.git]
+git clone https://github.com/matthewlondon/Capstone.git
 ```
 2. Set up a virtual environment:
 ```
@@ -37,16 +37,18 @@ git clone [https://github.com/matthewlondon/Capstone.git]
     bash
     python -m venv venv
     source venv/bin/activate  
-    #On Windows: `venv\Scripts\activate`#
+    (On Windows: `venv\Scripts\activate`)
     
 3. Install dependencies:
 ```bash
+cd Capstone
 pip install -r requirements.txt
+
 ```
     - ensures Pandas, NumPy, Matplot, and Seaborn will be validated when producing visualizations
 4. Run the `main.py` script:
 ```bash
-    python main.py
+    python src/main.py
 ```
 5. Open the `exploration.ipynb` file:
 
