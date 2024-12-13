@@ -1,7 +1,9 @@
 # Crime Data Analysis Project
 
 ## Project Overview
-This project analyzes crime data from Jefferson County, KY, spanning the years 2020 to 2024. The main focus is on processing, cleaning, and visualizing crime data, specifically related to auto thefts. The analysis merges crime data with ZIP code information and standardizes fields to prepare the data for insights and reporting. The motivation behind this project stems from my own vehicle theft during the first week of December, 2024. I had never met anyone who had dealt with this, and wanted to learn more about the prevalance of vehicle theft in my county. 
+This project analyzes crime data from Jefferson County, KY, spanning the years 2020 to 2024. The main focus is on processing, cleaning, and visualizing crime data, specifically related to auto thefts. The analysis merges crime data with ZIP code information and standardizes fields to prepare the data for insights and reporting. 
+
+The motivation for this project stems from a personal experience: my vehicle was stolen during the first week of December 2024. I became curious about the rates of theft, how common this was in my area, and quickly decided to structure my project around this issue.
 
 ## Data Sources
 - **Crime Data**: Raw crime data from 2020 to 2024 provided in CSV format.
