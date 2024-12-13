@@ -38,6 +38,9 @@ git clone https://github.com/matthewlondon/Capstone.git
 ```
 2. Set up a virtual environment:
 ```bash
+cd Capstone
+```
+```bash
 python -m venv venv
 ```
 ```bash
@@ -51,9 +54,6 @@ source venv/Scripts/activate
 
     
 3. Install dependencies:
-```bash
-cd Capstone
-```
 ```bash
 pip install -r requirements.txt
 ```
