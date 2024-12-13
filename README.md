@@ -27,15 +27,15 @@ This project analyzes crime data from Jefferson County, KY, spanning the years 2
 
 ## Steps to Reproduce
 1. Clone the repository:
+```
+open new Git bash terminal in code editor
+```
 ```bash
 git clone https://github.com/matthewlondon/Capstone.git
 ```
 2. Set up a virtual environment:
 
     [x] Feature 4: Utilize a virtual environment and include instructions in your README on how the user should set one up
-```
-open new Git bash terminal in code editor
-```
 
 ```bash
 python -m venv venv
