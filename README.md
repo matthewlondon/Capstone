@@ -13,9 +13,9 @@ This project analyzes crime data from Jefferson County, KY, spanning the years 2
 
 - **ZIP Codes**: ZIP code data for filtering relevant locations (Jefferson County, KY).
 - https://www.unitedstateszipcodes.org/zip-code-database/
-```
-[x] Feature 1: Read TWO data files (JSON, CSV, Excel, etc.). 
-```
+
+### Feature 1: Read TWO data files (JSON, CSV, Excel, etc.). 
+
 ## File Structure
 - **`main.py`**: The main script that orchestrates data processing.
 - **`preprocessing.py`**: Contains modular functions for loading, cleaning, and processing data.
@@ -23,9 +23,8 @@ This project analyzes crime data from Jefferson County, KY, spanning the years 2
 - **`data/raw_data/`**: Folder containing raw crime data files.
 - **`data/processed_data/`**: Folder containing processed data outputs.
 
-```
-[x] Feature 2: Clean your data and perform a pandas merge with your two data sets, then calculate some new values based on the new data set.  
-```
+### Feature 2: Clean your data and perform a pandas merge with your two data sets, then calculate some new values based on the new data set.  
+
 
 ## Steps to Reproduce
 1. Clone the repository:
@@ -36,9 +35,6 @@ open new Git bash terminal in code editor
 git clone https://github.com/matthewlondon/Capstone.git
 ```
 2. Set up a virtual environment:
-
-    [x] Feature 4: Utilize a virtual environment and include instructions in your README on how the user should set one up
-
 ```bash
 python -m venv venv
 ```
@@ -47,8 +43,10 @@ source venv/bin/activate
 ```
 if using Windows:
 ```bash
-source venv\Scripts\activate
+source venv/Scripts/activate
 ```
+### Feature 4: Utilize a virtual environment and include instructions in your README on how the user should set one up.
+
     
 3. Install dependencies:
 ```bash
@@ -65,17 +63,20 @@ python src/main.py
 5. Open the `exploration.ipynb` file:
 
 6. Run all scripts to view matplot and seaborn visualizations:
-```
-[x] Feature 3: Make 3 matplotlib or seaborn (or another plotting library) visualizations to display your data.
-```
     
-        - Most Common Days for Reported Auto Thefts
-        - Auto Theft Trends Over the Years
-        - Top 10 ZIP Codes for Auto Thefts
-        - Trends by Day of Week and Top 10 Locations
-        - Yearly Trends by ZIP Code
-        - Personal Analysis of My Car Theft Incident
-        - Incidents per 100 People by ZIP Code
+- Most Common Days for Reported Auto Thefts
+- Auto Theft Trends Over the Years
+- Top 10 ZIP Codes for Auto Thefts
+- Trends by Day of Week and Top 10 Locations
+- Yearly Trends by ZIP Code
+- Personal Analysis of My Car Theft Incident
+- Incidents per 100 People by ZIP Code
+```
+When executing "Run All" in the exploration.ipynb file, check Python interpreter and use venv
+```
+
+### Feature 3: Make 3 matplotlib or seaborn (or another plotting library) visualizations to display your data.
+
     
     
 
