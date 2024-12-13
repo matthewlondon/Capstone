@@ -74,7 +74,7 @@ python src/main.py
 - Personal Analysis of My Car Theft Incident
 - Incidents per 100 People by ZIP Code
 ```
-When executing "Run All" in the exploration.ipynb file, check Python interpreter and use venv
+May encounter "cannot resolve (library) from source" upon opening the notebook. Ensure the kernel is venv. When executing "Run All" in the exploration.ipynb file, check Python interpreter to clear warnings.
 ```
 
 ### Feature 3: Make 3 matplotlib or seaborn (or another plotting library) visualizations to display your data.
