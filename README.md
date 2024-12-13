@@ -74,7 +74,10 @@ python src/main.py
 - Personal Analysis of My Car Theft Incident
 - Incidents per 100 People by ZIP Code
 ```
-May encounter "cannot resolve (library) from source" upon opening the notebook. Ensure the kernel is venv. When executing "Run All" in the exploration.ipynb file, check Python interpreter to clear warnings.
+May encounter "cannot resolve (library) from source" upon opening the notebook. 
+Ensure the kernel is venv. When executing "Run All" in the exploration.ipynb file, check Python interpreter to clear warnings.
+If warnings persist, Clear cache and reload window(with venv as kernel) to clear warnings. Use Ctrl + Shift + P and select:
+Python: Clear Cache and Reload Window
 ```
 
 ### Feature 3: Make 3 matplotlib or seaborn (or another plotting library) visualizations to display your data.
