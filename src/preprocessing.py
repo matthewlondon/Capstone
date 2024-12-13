@@ -1,8 +1,9 @@
 import pandas as pd
+from pathlib import Path
 import numpy as np
 
 
-def load_and_filter_zip_codes(zip_file):
+def load_and_filter_zip_codes(zip_file,  processed_data_dir):
     
     # Filter for Jefferson County in Kentucky
     zip_to_county_df = pd.read_csv(zip_file)
@@ -14,7 +15,10 @@ def load_and_filter_zip_codes(zip_file):
     # Clean and reset index
     filtered_df['zip'] = pd.to_numeric(filtered_df['zip'], errors='coerce').astype('Int64')
     filtered_df = filtered_df[['zip', 'latitude', 'longitude', 'irs_estimated_population']].reset_index(drop=True)
-    filtered_df.to_csv('./data/processed_data/jefferson_zip_df.csv', index=False)
+    # Save the processed file
+    processed_data_dir.mkdir(parents=True, exist_ok=True)  # Ensure the directory exists
+    filtered_df.to_csv(processed_data_dir / "jefferson_zip_df.csv", index=False)
+    # filtered_df.to_csv('./data/processed_data/jefferson_zip_df.csv', index=False)
 
 def load_and_clean_crime_data(file_paths, columns_to_rename, columns_to_drop):
     
@@ -56,8 +60,9 @@ def load_and_clean_crime_data(file_paths, columns_to_rename, columns_to_drop):
     # Combine all data frames
     return pd.concat(data_frames, ignore_index=True)
 
-def process_and_merge_data(crime_df):
-    jefferson_zip_df = pd.read_csv('./data/processed_data/jefferson_zip_df.csv')
+def process_and_merge_data(crime_df, processed_data_dir):
+    jefferson_zip_df = pd.read_csv(processed_data_dir / "jefferson_zip_df.csv")
+    # jefferson_zip_df = pd.read_csv('./data/processed_data/jefferson_zip_df.csv')
     merged_df = jefferson_zip_df.merge(crime_df, how='inner', on='zip')
 
     # Clean and format date columns
@@ -167,6 +172,8 @@ def retype_data(merged_df):
     return merged_df
 
 # Export new data
-def save_cleaned_data(merged_df):
+def save_cleaned_data(merged_df, processed_data_dir):
+    processed_data_dir.mkdir(parents=True, exist_ok=True)  # Ensure the directory exists
+    merged_df.to_csv(processed_data_dir / "cleaned_crime_data.csv", index=False)
 
-    merged_df.to_csv('./data/processed_data/cleaned_crime_data.csv', index=False)
+    # merged_df.to_csv('./data/processed_data/cleaned_crime_data.csv', index=False)
