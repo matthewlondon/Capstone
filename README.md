@@ -31,24 +31,34 @@ This project analyzes crime data from Jefferson County, KY, spanning the years 2
 git clone https://github.com/matthewlondon/Capstone.git
 ```
 2. Set up a virtual environment:
+
+    [x] Feature 4: Utilize a virtual environment and include instructions in your README on how the user should set one up
 ```
-[x] Feature 4: Utilize a virtual environment and include instructions in your README on how the user should set one up
+open new Git bash terminal in code editor
 ```
-    bash
-    python -m venv venv
-    source venv/bin/activate  
-    (On Windows: `venv\Scripts\activate`)
+
+```bash
+python -m venv venv
+```
+```bash
+source venv/bin/activate
+```
+if using Windows:
+```bash
+source venv\Scripts\activate
+```
     
 3. Install dependencies:
 ```bash
 cd Capstone
-pip install -r requirements.txt
-
 ```
-    - ensures Pandas, NumPy, Matplot, and Seaborn will be validated when producing visualizations
+```bash
+pip install -r requirements.txt
+```
+
 4. Run the `main.py` script:
 ```bash
-    python src/main.py
+python src/main.py
 ```
 5. Open the `exploration.ipynb` file:
 
