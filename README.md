@@ -19,11 +19,13 @@ This project analyzes crime data from Jefferson County, KY, spanning the years 2
 ## File Structure
 - **`main.py`**: The main script that orchestrates data processing.
 - **`preprocessing.py`**: Contains modular functions for loading, cleaning, and processing data.
+
+- **`data/raw_data/`**: Folder containing raw crime data files.
+- **`data/processed_data/`**: Folder containing processed data outputs.
+
 ```
 [x] Feature 2: Clean your data and perform a pandas merge with your two data sets, then calculate some new values based on the new data set.  
 ```
-- **`data/raw_data/`**: Folder containing raw crime data files.
-- **`data/processed_data/`**: Folder containing processed data outputs.
 
 ## Steps to Reproduce
 1. Clone the repository:
