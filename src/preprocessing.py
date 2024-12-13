@@ -15,10 +15,10 @@ def load_and_filter_zip_codes(zip_file,  processed_data_dir):
     # Clean and reset index
     filtered_df['zip'] = pd.to_numeric(filtered_df['zip'], errors='coerce').astype('Int64')
     filtered_df = filtered_df[['zip', 'latitude', 'longitude', 'irs_estimated_population']].reset_index(drop=True)
-    # Save the processed file
-    processed_data_dir.mkdir(parents=True, exist_ok=True)  # Ensure the directory exists
+    # Save the processed file and ensure the directory exists
+    processed_data_dir.mkdir(parents=True, exist_ok=True)
     filtered_df.to_csv(processed_data_dir / "jefferson_zip_df.csv", index=False)
-    # filtered_df.to_csv('./data/processed_data/jefferson_zip_df.csv', index=False)
+
 
 def load_and_clean_crime_data(file_paths, columns_to_rename, columns_to_drop):
     

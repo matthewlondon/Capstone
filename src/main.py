@@ -18,15 +18,7 @@ def main():
         for year in range(2020, 2025)
     ]
     processed_data_dir = project_root / "data" / "processed_data"
-    # zip_file = "./data/raw_data/zip.csv"
-    # crime_files = [
-    #     "./data/raw_data/2020.csv",
-    #     "./data/raw_data/2021.csv",
-    #     "./data/raw_data/2022.csv",
-    #     "./data/raw_data/2023.csv",
-    #     "./data/raw_data/2024.csv"
-    # ]
-    
+
     columns_to_drop = ['block_address', 'BLOCK_ADDRESS', 'city', 
                        'City','badge_id', 'BADGE_ID', 'ObjectId', 
                        'nibrs_code', 'NIBRS_CODE','nibrs_group_name',
